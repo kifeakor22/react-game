@@ -1,0 +1,12 @@
+.navbar {
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    font-weight: bolder;
+    font-size: calc(10px + (24 - 10) * (100vw - 320px) / (1200 - 400));
+    background-color: blueviolet;
+    height: 90px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
