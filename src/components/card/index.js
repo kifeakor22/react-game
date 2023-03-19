@@ -12,7 +12,7 @@ const Card = (props) => {
     
     <section className="container-fluid">
       
-      {props.cards.map((card, index) => {
+      {props.cards.map((card) => {
         return (
           <div key={card.id} onClick={() => handleClick(card.id)}>
             <div>
