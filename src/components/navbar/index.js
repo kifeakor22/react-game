@@ -1,17 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import './style.css'
 
-const Nav = () => {
-   
-
+const Nav = (props) => {
     return (
         <>
         <div className='navbar'>
             <div className='container-fluid'>
                 <div className='nav-brand'>Clicky Game</div>
-                <div>{userGuess}</div>
-                <div>Score:{score} | Top Score:{topScore}</div>
+                <div>{props.userGuess}</div>
+                <div>Score:{props.score} | Top Score:{props.topScore}</div>
             </div>
         </div>
         </>

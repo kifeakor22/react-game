@@ -1,11 +1,16 @@
 import React, {useState, useEffect} from 'react'
 import Card from '../card'
+import Nav from '../navbar'
+import Herogrid from '../herogrid'
 import './style.css'
 
 
 
 const Cards = () => {
     const [cards, setCards] = useState([])  
+    const [score, setScore] = useState(0)
+    const [topScore, setTopScore] = useState(0)
+    const [userGuess, setUserGuess] = useState('Click an image to begin!')
     const shuffleData = () => {
         setCards(prevCards => {
             const shuffledCards = [...prevCards];
@@ -35,6 +40,8 @@ const Cards = () => {
    
     return (
         <>
+        <Nav score={score} topScore={topScore} userGuess={userGuess}/>
+        <Herogrid/>
           <section>
             <div className='container' onClick={shuffleData}>
                 <div className='row'>
