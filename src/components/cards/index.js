@@ -43,7 +43,10 @@ const Cards = () => {
         <Nav score={score} topScore={topScore} userGuess={userGuess}/>
         <Herogrid/>
           <section>
-            <div className='container' onClick={shuffleData}>
+            <div className='container' onClick={()=>{shuffleData()
+            setScore (score + 1)
+            setTopScore (score)
+            setUserGuess ("correct")}}>
                 <div className='row'>
                     <Card cards={cards} /> 
                 </div>

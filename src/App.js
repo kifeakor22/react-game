@@ -1,7 +1,6 @@
-import Herogrid from './components/herogrid';
-import Nav from './components/navbar';
+
 import Cards from './components/cards';
-import React, {useState} from 'react'
+import React from 'react'
 
 
 function App() {
