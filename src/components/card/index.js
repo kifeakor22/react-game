@@ -4,8 +4,8 @@ import './style.css';
 
 const Card = (props) => {
 
-  const handleClick = (index) => {
-    props.onClick(index);
+  const handleClick = (id) => {
+    props.onClick(id);
   }
 
   return (
@@ -14,7 +14,7 @@ const Card = (props) => {
       
       {props.cards.map((card, index) => {
         return (
-          <div key={index} onClick={() => handleClick(index)}>
+          <div key={card.id} onClick={() => handleClick(card.id)}>
             <div>
               <div className="card col-lg-3">
                 <img
