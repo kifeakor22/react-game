@@ -5,9 +5,7 @@ import './style.css'
 
 
 const Cards = () => {
-    const [cards, setCards] = useState([])
-    
-    
+    const [cards, setCards] = useState([])  
     const shuffleData = () => {
         setCards(prevCards => {
             const shuffledCards = [...prevCards];

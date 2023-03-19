@@ -1,11 +1,9 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 import './style.css'
 
 const Nav = () => {
-    const [score, setScore] = useState(0)
-    const [topScore, setTopScore] = useState(0)
-    const [userGuess, setUserGuess] = useState('Click an image to begin!')
+   
 
     return (
         <>
