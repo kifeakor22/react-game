@@ -1,6 +1,6 @@
 .navbar {
     color: white;
-    position: fixed;
+    position: fixed !important;
     width: 100%;
     z-index: 99;
     font-weight: bolder;

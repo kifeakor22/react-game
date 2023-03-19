@@ -6,23 +6,41 @@ import './style.css'
 
 const Cards = () => {
     const [cards, setCards] = useState([])
+    
+    
+    const shuffleData = () => {
+        setCards(prevCards => {
+            const shuffledCards = [...prevCards];
+            let i = shuffledCards.length - 1;
+            while (i > 0) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffledCards[i], shuffledCards[j]] = [shuffledCards[j], shuffledCards[i]];
+                i--;
+            }
+            return shuffledCards;
+        });
+    };
 
+      
     const fetchCard = async () => {
         const data = await fetch("https://api.giphy.com/v1/stickers/packs/3138/stickers?api_key=xdNShamUbUPVNMXwcfGJOto5R53wy0es&limit=12&offset=0")
         const response = await data.json()
         console.log(response)
         setCards(response.data)
+        
     }  
+    
 
     useEffect(() => {
-        fetchCard()
-    }, [])
+        fetchCard()    
+    },[])
+   
     return (
         <>
           <section>
-            <div className='container'>
+            <div className='container' onClick={shuffleData}>
                 <div className='row'>
-                    <Card cards={cards}/>   
+                    <Card cards={cards} /> 
                 </div>
             </div>
             
